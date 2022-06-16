@@ -133,15 +133,23 @@ nav .fas{
     width: 80%;
     margin:auto;
     text-align: center;
-    padding-top: 100px;
-  }
+    padding-top: 5px;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/coronation.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+  
 h1{
-    font-size: 36px;
+    font-size: 50px;
     font-weight: 600;
+    color:white;
 }
 p{
-    color: #777;
-    font-size: 14px;
+    color:white;
+    font-size: 17px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -151,6 +159,14 @@ p{
     margin: 5%;
     display: flex;
     justify-content: space-between;
+}
+.row p{
+    color:black;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
 }
 .biblio-col{
     flex-basis: 31%;
@@ -167,11 +183,12 @@ h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    color:black;
     
 }
 
 .biblio-col:hover{
-    box-shadow: 0 0 20px 0px rgb(0,0,0,0.2);
+    box-shadow: 0 0 20px 0px rgb(255,0,0);
     
     
 }
@@ -184,12 +201,34 @@ h3{
 
 
 .awards{
-    width: 80%;
-    margin: auto;
+    
+     width: 80%;
+    margin:auto;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 5px;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/crown.webp);
+    background-position: center;
+   
+    position: relative;
+    
+    
+    
     
 }
+.awards h1 {
+font-size: 50px;
+    font-weight: 600;
+    color:white;
+}
+.awards p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+        color:black;
+    }
 .awards-col{
     flex-basis: 32%;
     border-radius: 10px;
@@ -239,19 +278,30 @@ h3{
 
 
 .Contributes{
-    width: 80%;
+    
     margin:auto;
     text-align: center;
     padding-top: 100px;
+    
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/queen.jpg);
+        background-position: center;
+        
+        position: relative;
+    
   }
 
+  .Contributes h1 {
+    font-size: 100px;
+        font-weight: 600;
+        color:white;
+        padding: 20px;
+    }
+   
 
 
 
-.Images{
-    width: 80%;
-    margin:auto;
-    text-align: center;
-    padding-top: 100px;
-  }
+
+
 
