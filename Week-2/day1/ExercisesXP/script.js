@@ -137,11 +137,11 @@ typeof(1 != 2)
 // Actual: Number 
 
 10 % 5
-// Prediction: Divides and produces remainder
+// Prediction: Divides and produces remainder = 2
 // Actual: Number
 
 5 % 10
-// Prediction: Divides and produces remainder
+// Prediction: Divides and produces remainder = 0.5
 // Actual: Number
 
 "Java" + "Script"
@@ -157,27 +157,27 @@ typeof(1 != 2)
 // Actual: String
 
 true + true
-// Prediction: Boolean 
-// Actual: Boolean 
+// Prediction: Number
+// Actual: Number
 
 true + false
-// Prediction: Boolean 
-// Actual: Boolean 
+// Prediction: Number
+// Actual: Number 
 
 false + true
-// Prediction: Boolean
-// Actual: Boolean 
+// Prediction: Number
+// Actual: Number 
 
 false - true
-// Prediction: Boolean
-// Actual: Boolean 
+// Prediction: Number
+// Actual: Number 
 
 !true
 // Prediction: Not Equal 
-// Actual: Boolean 
+// Actual: Number 
 
 3 - 4
-// Prediction: Subtraction
+// Prediction: Subtraction = -1
 // Actual: Number
 
 "Bob" - "bill"
