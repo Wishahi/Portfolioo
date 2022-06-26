@@ -65,8 +65,8 @@ typeof(5.5)
 // Actual: Number
 
 typeof(NaN)
-// Prediction:
-// Actual:
+// Prediction: Not a number
+// Actual: Number
 
 typeof("hello")
 // Prediction: Greeting
