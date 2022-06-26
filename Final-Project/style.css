@@ -156,7 +156,7 @@ p{
 }
 
 .row{
-    margin: 5%;
+    /* margin: 5%; */
     display: flex;
     justify-content: space-between;
 }
@@ -201,8 +201,7 @@ h3{
 
 
 .awards{
-    
-     width: 80%;
+    width: 80%;
     margin:auto;
     text-align: center;
     padding-top: 5px;
@@ -210,13 +209,12 @@ h3{
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/crown.webp);
     background-position: center;
-   
     position: relative;
     
     
-    
-    
-}
+    }
+
+
 .awards h1 {
 font-size: 50px;
     font-weight: 600;

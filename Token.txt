@@ -1,0 +1,3 @@
+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
+
+git remote add origin https://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@github.com/Wishahi/DI-Bootcamp-Stage1.git

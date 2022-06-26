@@ -1,0 +1,21 @@
+text-intent
+margin
+padding
+border
+text align properties 
+meta
+html boilerplate
+iframe
+
+
+
+css basics - exercise 4 and 5
+css advanced- exercise 1
+
+pseduo-class selectors
+children
+not
+
+
+
+copy the link of the exercise on github.
