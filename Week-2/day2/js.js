@@ -148,4 +148,20 @@
 // console.log(database[0].password);
 // console.log(newsfeed)
 
+//Exercise Gold verbing \
+// let verb= prompt("enter a verb");
+// let verb1 = verb.indexOf('ing');
+// let var1=  verb.substring(verb.length-3, verb.length);
+// console.log(verb.length);
+
+// if (verb.length>=3 && var1!=='ing') {
+//     console.log(verb + 'ing');
+// }
+// else if (verb.length>3 && var1=='ing'  ){
+//     console.log(verb +'ly');
+// }
+// else {
+//     console.log(verb);
+// }
+
 
