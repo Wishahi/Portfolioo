@@ -41,24 +41,25 @@
   
 
 //Exercise 2
-// function myMove(){
-//     let box = document.getElementById('animate');
-//     let pos = 0;
-//     // let x = 0
-//     let id = setInterval(function(){
-//         if (pos == 350){
-//             clearInterval(id)
-//         } else {
+function myMove(){
+    let box = document.getElementById('animate');
+    let pos = 0;
+    // let x = 0
+    let id = setInterval(function(){
+        if (pos == 350){
+            clearInterval(id)
+        } else {
 
         
-//         pos++;
-//         // x--;
-//         box.style.left=pos+ "px";
-//         // box.style.bottom=x + "px";
-//         }
+        pos++;
+        // x--;
+        box.style.left=pos+ "px";
+        // box.style.bottom=x + "px";
+        }
 
-//     },5)
-// }
+    },5)
+}
+
 
 
 //Exercise 3

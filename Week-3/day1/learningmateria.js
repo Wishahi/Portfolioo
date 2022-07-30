@@ -21,8 +21,9 @@
 // 5. Use the parentNode property to access an element.
 // 6. Use the childNodes property to access a group of child elements.
 
-// let div = document.getElementById('page');
-// console.log(div);
+let div = document.getElementById('page');
+console.log(div);
+console.log("Hello");
 
 
 // Exercise 2: Targeting nodes 
