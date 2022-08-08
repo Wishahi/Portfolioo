@@ -2,6 +2,7 @@ from multiprocessing import context
 from django.shortcuts import render
 import json 
 from django.http import HttpResponse
+from .models import FamilyProfile, AnimalProfile
 # Create your views here.
 import sys
 
@@ -29,3 +30,8 @@ def show_family(request, id):
     return HttpResponse("family not found {id}")
 
 
+def posts(request, family_id: int) -> HttpResponse:
+    animal = AnimalProfile.get(family_id)
+    posts = animal.posts
+    return render(request, 'posts.html', {'posts': posts})
+     
