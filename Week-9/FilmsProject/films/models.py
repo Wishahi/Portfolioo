@@ -52,3 +52,15 @@ class Film(models.Model):
             out += f"\n{str(dir)}"
         out += f"\nReleased: {self.release_date}"        
         return out
+
+
+# Create a new model called Poster with the following fields:
+# image : ImageField. A film can have only one poster and a poster is linked to only one film (Which relationship will you use ?)
+# explanation_img : will be used in the alt HTML attribute of the img tag
+
+# Create a form called AddPosterForm.
+
+# Combine the forms AddPosterForm and AddFilmForm. Therefore, a new film will be added at the same time as a new poster.
+class Poster(models.Model):
+    image = models.ImageField
+    explanation_img = models.CharField(max_length=50)

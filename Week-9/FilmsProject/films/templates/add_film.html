@@ -1,7 +1,11 @@
 {% extends 'partials/base.html'%}
 
 {% block content%}
+{%for film in films%}
 
+<img src="{{film.url}}" alt="{{film.explanation_img}}" width="500" height="600">
+
+{% endfor %}
 <form method = "post">
     {%csrf_token%}
     {{form.as_p}}

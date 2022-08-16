@@ -1,5 +1,7 @@
+from turtle import pos
 from django.shortcuts import render, redirect
-from .forms import FilmForm, DirectorForm
+from django.forms.formsets import formset_factory
+from .forms import FilmForm, DirectorForm, PosterForm
 from .models import Director, Film
 # Create your views here.
 
@@ -12,15 +14,27 @@ def homepage(request):
 def add_film(request):
     context.update({'form': FilmForm})
 
+    PosterFormSet = formset_factory(PosterForm, extra=2)
     if request.method == 'POST':
         form_filled = FilmForm(request.POST)
-        if form_filled.is_valid():
+        formset = PosterFormSet(request.POST)
+        if all ([form_filled.is_valid(), formset.is_valid()]):
             form_filled.save()
+            for inline_form in formset:
+                if inline_form.cleaned_data:
+                    poster = inline_form.save(commit=False)
+                    poster.image = form_filled
+                    poster.save()
             return redirect('homepage')
         else:
-            print (form_filled.errors)    
+            # print (form_filled.errors) 
+            form =FilmForm()
+            formset = PosterFormSet
+
 
     return render (request, 'add_film.html', context)
+
+
 
 def add_director(request):
     context.update({'form': DirectorForm})
