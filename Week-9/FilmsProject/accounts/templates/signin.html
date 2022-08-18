@@ -9,9 +9,17 @@
 <body>
 
     <form method="post">
+        
         {%csrf_token%}
-        {{form.as_p}}
+        {% for field in forms %}
+        <br>
+        {{field.label_tag}}
+        <br>
+        {{field}}
+        
         <button type="submit"> Sign up</button>
+
+        <ah href = "{% url 'signup'%}">Need to Sign up?</a>
     
 </body>
 </html>

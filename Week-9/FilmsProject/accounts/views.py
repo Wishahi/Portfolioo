@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User, Group
+from .models import UserProfile
 
 from .forms import ProfileForm 
 
@@ -24,6 +25,12 @@ def signup(request):
             password= form_filled.cleaned_data.get("password1")
            #Authenticate
             user= authenticate(username = username, password = password)
+
+            user = form_filled.save() 
+            #create empty profile here once authenticated
+            UserProfile.objects.create(user_id= user.id)
+
+
 
             # user = authenticate(username, password)
             # if user is not None:
@@ -73,30 +80,22 @@ def signout(request):
         return redirect('signin')
     
 
-def create_profile(request):
+def update_profile(request):
+    profile = request.user.userprofile
+    form = ProfileForm(request.POST or None, instance=profile)
+    context = {'form': form}
+
+    if form.is_valid():
+        form.save()
+    return redirect('profile') 
+
+    return render (request, 'update_profile.html', context) 
     
-    if request.method =='POST':
-        filled_form = ProfileForm(request.POST)
-        if filled_form.is_valid():
+   
 
-            #profile with hobbies image address
-            profile= filled_form.save(commit= False)
-           
-           #we get user through request
-           
-            profile.user = request.user
-            profile.save()
-            return redirect('profile')
-        else:
-            return render (request, 'create_profile.html', {'form': filled_form})    
+def profile(request):
+    user = request.User
+    profile = user.userprofile
+    context= {'profile': profile}
 
-
-    else:
-        #check is user is logged in 
-        if request.user.is_authenticated:
-            form = ProfileForm
-            form.fields['user'] = request.user.id
-            return render(request, 'create_profile.html', {'form': form})
-        else:
-            return redirect('signin')
-
+    return render (request, 'profile.html', context)

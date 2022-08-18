@@ -9,12 +9,25 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{%url 'homepage'%}">Home</a>
           </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'profile' %}">Add Film</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'signin' %}">Add Film</a>
+          </li>
+          {% endif%}
+
+          {% if user.is_staff %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'add_film' %}">Add Film</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'add_director' %}">Add Director</a>
           </li>
+
+          {% endif %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Directors

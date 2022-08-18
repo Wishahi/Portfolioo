@@ -54,13 +54,25 @@ class Film(models.Model):
         return out
 
 
-# Create a new model called Poster with the following fields:
-# image : ImageField. A film can have only one poster and a poster is linked to only one film (Which relationship will you use ?)
-# explanation_img : will be used in the alt HTML attribute of the img tag
+class Comment(models.Model):
+    commentuser = models.TextField(max_length=200)
 
-# Create a form called AddPosterForm.
+    def __str__(self) -> str:
+        return self.commentuser
 
-# Combine the forms AddPosterForm and AddFilmForm. Therefore, a new film will be added at the same time as a new poster.
 class Poster(models.Model):
     image = models.ImageField
     explanation_img = models.CharField(max_length=50)
+
+
+class Review(models.Model):
+    rate_choices = (
+        (1,1),
+        (2,2),
+        (3,3),
+        (4,4),
+        (5,5)
+    )
+    stars = models.ForeignKey(Film,choices=rate_choices)
+
+    
