@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="style.css">
   </head>
   <style media="screen">
-#dragelement {
+/* #dragelement {
     position: absolute;
     left:0;
     top:0;
@@ -16,12 +16,12 @@
     height: 100px;
 
 
-}
+} */
 
   </style>
 
   <body>
-    <p class="title"> Drag the
+    <!<p class="title"> Drag the
         <span class="pink">Pink</span>
         Square to the
         <span class="orange">Orange</span>
@@ -30,22 +30,22 @@
     </p>
 
     <div class="squares-container">
-        <!-- ondragover ondrop -->
-        <div class="draggable-container">
+        <-- ondragover ondrop -->
+        <!-- <div class="draggable-container"> -->
           <!-- ondragstart ondragend -->
-           <div id="draggable-element"></div>
-        </div> -->
+           <!-- <div id="draggable-element"></div> -->
+        <!-- </div> --> 
 
         <!-- ondragover ondrop -->
-         <div id="drop-container"></div>
-    </div> 
+         <!-- <div id="drop-container"></div>
+    </div>  --> 
 
 
-
-     <!-- <button onclick="start()" >Start </button>
+<!-- 
+     <button onclick="start()" >Start </button>
     <button onclick="stop()" >Stop </button>
     <div id="outer">
-      <div id="inner"> -->
+      <div id="inner">
 
 
 
@@ -55,5 +55,41 @@
 
     <div id = "dragelement" draggable="true"> </div>
     <script src="learningmaterial.js"></script>
+  </body>
+</html> --> 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #outer {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background-color: yellow;
+      }
+      #inner{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <div id="outer">
+      <div id='inner'>
+
+      </div>
+    </div>
+
+    <script src="learningmaterial.js" charset="utf-8"></script>
   </body>
 </html>

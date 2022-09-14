@@ -36,23 +36,23 @@
 // // let innerbox = document.getElementById('inner');
 // // console.log(innerbox);
 
-// // function start(){
-// //     let x = 1;
-// //     setInterval(function(){
-// //         x++;
+// function start(){
+//     let x = 1;
+//     setInterval(function(){
+//         x++;
          
-// // //   let left = x + "px";
-// //   innerbox.style.left=x;
+// //   let left = x + "px";
+//   innerbox.style.left=x;
         
-// //         // console.log(index);
-// //     },1000/60)
-// //     // innerbox.style.right=left;
-// // }
+//         // console.log(index);
+//     },1000/60)
+//     // innerbox.style.right=left;
+// }
 
-// // function stop(){
-// //     clearInterval(innerbox)
+// function stop(){
+//     clearInterval(innerbox)
 
-// // }
+// }
 
 // function start(){
 //     let box = document.getElementById('inner');
@@ -125,21 +125,38 @@
 
 // })
 
-let elem = document.getElementById('dragelement');
+// let elem = document.getElementById('dragelement');
 
 
-elem.addEventListener('dragend', function(event){
-    elem.style.border = "none";
+// elem.addEventListener('dragend', function(event){
+//     elem.style.border = "none";
 
-})
+// })
 
-elem.addEventListener('dragend', function(event){
-    // console.log(event);
-    let x = event.clientX;
-    let y = event.clientY;
-    elem.style.border = '5px solid red';
-    console.log(x,y);
-    elem.style.left = x+ 'px';
-    elem.style.top = y + 'px';
+// elem.addEventListener('dragend', function(event){
+//     // console.log(event);
+//     let x = event.clientX;
+//     let y = event.clientY;
+//     elem.style.border = '5px solid red';
+//     console.log(x,y);
+//     elem.style.left = x+ 'px';
+//     elem.style.top = y + 'px';
 
-})
+// })
+
+
+function start(){
+    let box = document.getElementById('inner');
+    let pos = 0;
+    let id = setInterval(function(){
+      if(pos == 350){
+        clearInterval(id)
+      }
+      else{
+        pos++
+        box.style.left = pos + "px";
+        box.style.top = pos + "px";
+      }
+  
+    },1)
+  }
