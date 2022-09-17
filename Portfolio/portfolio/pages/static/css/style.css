@@ -38,7 +38,7 @@ nav img{
 nav h3{
     width:100px;
     float:left;
-    font-size: xxx-large;
+    font-size: xx-large;
     font-weight: bold;
     font-family: serif;
 }
@@ -116,7 +116,7 @@ nav .fas{
     color: black;
     position: absolute;
     top: 50%;
-   left: 50%;
+   left: 27%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
@@ -130,7 +130,32 @@ span{
 }
 
 
+.imagesme{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
 
+}
+
+.imagesme img {
+    height: 73%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+    margin-bottom: 62px;
+}
+
+/* .imagesme:hover .shape{
+    bottom: 40px;
+} */
+
+.imagesme:hover .me {
+    left: 45%;
+}
 
 
 
@@ -146,6 +171,7 @@ span{
 
   .education h1{
     margin-top: -40px;
+    color: orange;
   }
 h2{
     font-size: 36px;
@@ -211,12 +237,14 @@ p{
     text-align: center;
     padding-top: 10%;
     background: #eff4fd;
+    margin-bottom: 56px;
     
     
 }
 
 .techskills h1 {
     margin-top: -127px;
+    color: orange;
 }
 
 .rowimg{
@@ -298,8 +326,17 @@ p{
 
 .project, ::after, ::before {
     box-sizing: border-box;
+    margin-top: 71px;
+    margin-bottom: 83px;
 }
 
+
+.projectsh1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: orange;
+}
 
 .card {
     position: relative;
@@ -343,3 +380,17 @@ p{
         color: #0d6efd;
     text-decoration: underline
     }
+
+
+.hire{
+    color: orange;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}    
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
