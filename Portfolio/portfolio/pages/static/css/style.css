@@ -2,9 +2,14 @@
     margin :0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    
-    
+
+ 
 }
+
+body {
+    background: #eff4fd;
+}    
+   
 .header{
     min-height: 100vh;
     width: 100%;
@@ -25,6 +30,17 @@ nav{
 nav img{
     width: 100px;
     float: left;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+nav h3{
+    width:100px;
+    float:left;
+    font-size: xxx-large;
+    font-weight: bold;
+    font-family: serif;
 }
 .nav-links {
     flex:1;
@@ -45,7 +61,7 @@ nav img{
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: orange;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -72,7 +88,7 @@ nav .fas{
     }
     .nav-links{
         position: absolute;
-        background: #f44336;
+        background: orange;
         height: 100vh;
         width: 200px;
             top:0;
@@ -116,11 +132,20 @@ span{
 
 
 
+
+
+
+
 .education{
     width: 80%;
     margin:auto;
     text-align: center;
     padding-top: 100px;
+    
+  }
+
+  .education h1{
+    margin-top: -40px;
   }
 h2{
     font-size: 36px;
@@ -142,12 +167,14 @@ p{
 }
 .edu-col{
     flex-basis: 31%;
-    background: #fff3f3;
+    background: #f8b878;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
+    color: #808080;
+    
    
     
     
@@ -178,24 +205,32 @@ p{
 
 
 
-.campus{
+.techskills{
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 10%;
+    background: #eff4fd;
     
     
 }
 
+.techskills h1 {
+    margin-top: -127px;
+}
 
 .rowimg{
     display: flex;
     flex-direction: row;
     padding-top:25px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.campus-col{
+.skill-col{
     flex-basis: 32%;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -204,8 +239,8 @@ p{
     
 }
 
-.campus-col img{
-    width: 60%;
+.skill-col img{
+    width: 30%;
     display: block;
 }
 
@@ -213,7 +248,7 @@ p{
     background: transparent;
     border-radius: 10px;
     height: 100%;
-    width: 65%;
+    width: 35%;
     position: absolute;
     top: 0;
     left: 0;
@@ -221,14 +256,14 @@ p{
 }
 
 .layer:hover{
-    background: rgba(226,0,0,0.7);
+    background: orange;
 }
 
 .layer h3{
     width: 100%;
     font-weight: 500;
     color:#fff;
-    font-size: 20px;
+    font-size: 16px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -242,3 +277,69 @@ p{
     opacity: 1;
 }
 
+
+
+
+
+.project{
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    /* background-color: #fff; */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    justify-content: space-evenly
+}
+
+
+.project, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1pxsolidrgba(0,0,0,.125);
+    border-radius: 0.25rem;
+
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.card-text {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #777;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+    }
+
+    .card-link{
+        color: #0d6efd;
+    text-decoration: underline
+    }

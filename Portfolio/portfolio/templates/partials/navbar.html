@@ -12,15 +12,18 @@
     <section class="header">
         <nav>
         <a>
-            <img src="{% static 'images/mysql.png' %}"></a>
+            <!-- <img src="{% static 'images/mysql.png' %}">LW -->
+            <h3>LW</h3>
+        </a>
             <div class="nav-links" id="navLinks">
                 <i class="fas fa-times" onclick="hideMenu()"></i>
                 <ul>
-                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="#home1">HOME</a></li>
+                <li><a href="#edu1">EDUCATION</a></li>
+                <li><a href="#skill1">SKILLS</a></li>
+                <li><a href="project1">PROJECTS</a></li>
+                <li><a href="#contact1">HIRE ME</a></li>
                 
-                <li><a href="{% url 'skills' %}">SKILLS</a></li>
-                <li><a href="">CONTACT</a></li>
-                <li><a href="">PROJECTS</a></li>
                 </ul>
             </div>
             <i class="fas fa-bars" onclick="showMenu()"></i>
@@ -32,9 +35,10 @@
     
     </section>
 
-    <div class="text-box">
+    <div class="text-box" id="home1">
         
         <h1>I am Leen <span>Wishahi</span></h1>
+        <h2> Full Stack Developer</h2>
         <p> This is my official portfolio website <br> 
             to see my education, technica; skills, and projects
             
@@ -44,37 +48,212 @@
         </div>  
 
 
-        <section class="e">
-           
+        <hr>
 
-            <h1> Courses we Offer</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. .</p>
-            {% if info %}
-            {% for y in info%}
-            <div class= "row1">
-                <div class="edqu-col">
-                    <h3>Intermediate</h3>
-                        <p>{{y.grade}}</p>
-                </div>
-                 <div class="edqu-col">
-                    <h3>Degree</h3>
-                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                 <div class="edqu-col">
-                    <h3>Post Graduation</h3>
-                        <p>  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                 </div>
-              
+        <section class="education" id="edu1" > 
+            <h1>Education</h1>
+            <div class="row">
+        
+               
+                
+                    <div class="edu-col">
+                        <h3>Developers Institute</h3>
+                        <h4>Python Coding Bootcamp</h4>
+                        <h4>Ramat Gan</h4>
+                        <h4>06/2022-09/2022</h4>
+                     </div>
+        
+                        
+
+                        <div class="edu-col">
+                            <h3>University of Sussex</h3>
+                            <h4>Master’s Degree – Information Technology with Business and Management</h4>
+                            <h4>Overall Grade: 67 or 2:1 - US GPA Equivalent: 3.7</h4>
+                            <h4>Brighton, United Kingdom</h4>
+                            <h4>2019-2020</h4>
+                         </div>
+
+
+
+                         <div class="edu-col">
+                            <h3>Manchester Metropolitan Univeristy</h3>
+                            <h4>Bachelor’s Degree- Software Engineering</h4>
+                            <h4>Overall Grade: 68 or 2:1 - US GPA Equivalent: 3.7</h4>
+                            <h4>Manchester, United Kingdom</h4>
+                            <h4>2015-2019</h4>
+                         </div>
+                    
+                     
+                         <div class="edu-col">
+                            <h3>Anglican International School of Jerusalem</h3>
+                            <h4>American Diploma</h4>
+                            <h4>Overall Grade: 3.8</h4>
+                            <h4>2015</h4>
+                         </div>
+                  
+                
+        
             </div>
-            {%endfor%}  
-            {%else%}
-            <p>you suck</p>
-            {%endif%}
+        </section> 
+        
+
+
+
+<hr>
+
+
+
+
+
+
+        <section class="techskills" id="skill1">
+            <h1>Technical Skills</h1>
+            
+            
+            <div class="rowimg">
+                <div class="skill-col">
+                <img src="{% static 'images/html1.png' %}">
+                    <div class="layer">
+                    <h3>HTML</h3>
+                    </div>
+                </div>
+                 <div class="skill-col">
+                <img src="{% static 'images/css1.jpg' %}">
+                    <div class="layer">
+                    <h3>CSS</h3>
+                    </div>
+                </div>
+                 <div class="skill-col">
+                <img src="{% static 'images/js.png' %}">
+                    <div class="layer">
+                    <h3>JAVASCRIPT</h3>
+                    </div>
+                </div>
+
+                <div class="skill-col">
+                    <img src="{% static 'images/python.jpg' %}">
+                        <div class="layer">
+                        <h3>PYTHON</h3>
+                        </div>
+                    </div>
+
+                    <div class="skill-col">
+                        <img src="{% static 'images/java.png' %}">
+                            <div class="layer">
+                            <h3>JAVA</h3>
+                            </div>
+                        </div>
+
+                <div class="skill-col">
+                        <img src="{% static 'images/sql.png' %}">
+                            <div class="layer">
+                            <h3>SQL</h3>
+                     </div>
+                </div>
+
+                        <div class="skill-col">
+                            <img src="{% static 'images/mysql.png' %}">
+                                <div class="layer">
+                                <h3>MYSQL</h3>
+                                </div>
+                    </div>
+
+
+                    <div class="skill-col">
+                        <img src="{% static 'images/postegresql.png' %}">
+                            <div class="layer">
+                            <h3>POSTGRESQL</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-col">
+                            <img src="{% static 'images/restai.png' %}">
+                                <div class="layer">
+                                <h3>REST API</h3>
+                                </div>
+                            </div>
+
+                            
+                        <div class="skill-col">
+                            <img src="{% static 'images/bt.png' %}">
+                                <div class="layer">
+                                <h3>BOOTSRAP</h3>
+                                </div>
+                            </div>
+                        
+            </div>
+            
+        
+        
+        
         </section>
+        
+
+
+<hr>
 
 
 
 
+
+ <section class="project" id=" project1">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{% static 'images/tourguide.PNG' %}"" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Tour Guide Website</h5>
+          <p class="card-text">A website built with Django framework for people wanting to explore the country by searching keywords, city,or direction. The results will give users places to eat, visit and activites to be done in the specfied city </p>
+          <a href="http://wishahileen.pythonanywhere.com/" class="card-link">Website</a>
+          <a href="https://github.com/Wishahi/DI-Bootcamp-Stage1/tree/main/FinalProject/TourGuide" class="card-link">GitHub</a>
+        </div>
+      </div> 
+
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{% static 'images/trello.PNG' %}" alt="Card image cap" height="180px">
+        <div class="card-body">
+          <h5 class="card-title">Trello-like Website</h5>
+          <p class="card-text"> A website built with Django framework where a user can log in and post tasks, drag them depending on status and keep track of them  </p>
+          <a href="https://github.com/Wishahi/DI-Bootcamp-Stage1/tree/main/Week-3/TrelloAttempt" class="card-link">GitHub</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{% static 'images/snakegame1.jpeg' %}" alt="Card image cap" height="180px">
+        <div class="card-body">
+          <h5 class="card-title">Snake Game</h5>
+          <p class="card-text"> A regular snake game built with Java where user plays with keyboard arrows, eats apples for snake to grow, and loses if snake touches the borders or its body  </p>
+          <a href="#" class="card-link">GitHub ADDD</a>
+        </div>
+      </div> 
+
+
+
+
+
+</section> 
+
+
+
+<hr>
+
+
+<h1>Contact Us</h1>
+<form action="{% url 'contactView' %}" method="post" id="contact1">
+    {% csrf_token %}
+    <label for="email">Email:</label>
+    <input type="email" name="email" class="form-control" value= " {{form.from_email}}">
+
+    <label for="subject">Subject:</label>
+    <input type="subject" name="subject" class="form-control" value= " {{form.subject}}">
+
+    <label for="message" class="col-form-label">Message:</label>
+    <input type="message" name="message" class="form-control" value= " {{form.message}}">
+
+    <div class="form-actions">
+      <button type="submit" value="Send">Send</button>
+    </div>
+</form> 
         
 
         
